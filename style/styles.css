@@ -1,0 +1,713 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Kalam');
+
+
+html {
+  box-sizing: border-box;
+}
+
+/************Small (Global)****/
+
+body {
+	color: #000000;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1em;
+	margin: 0;
+	padding: 0;
+	border: 0;
+/*	background-color: #fff0b3;*/
+/*	background-image: linear-gradient(to bottom, white, #FFF6D6);*/
+	background-color: #fffefc;
+}
+
+img {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+
+.kleineTekst {
+	font-size: 0.8em;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	height: 1000px;
+/*	grid-gap: 10px;*/
+
+	grid-template-areas: 
+		"navBalk"
+		"nav"
+		"header"
+		"passie"
+		"weblog"
+		"archief"
+		"foot";
+}
+
+.grid-item {
+	margin: 0px 20px 0px 20px;
+}
+
+.box1 {
+	grid-area: navBalk;
+	height: 50px;
+	background-color: #F3D159;
+	margin: 0;
+	text-align: center;
+}
+
+h1 {
+	margin-top: 30px;
+	font-family: 'Kalam', cursif;
+	color: black;
+	display: inline-block;
+}
+
+.bedrijfNaam {
+	margin-left: 10%;
+}
+
+.box1 {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+nav {
+  padding: 0;
+  margin: 0;
+}
+
+nav ul {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  flex-grow: 1;
+  display: flex;
+  padding: 1em;
+  margin: 1em;
+  list-style: none;
+  justify-content: center;
+}
+
+.menu {
+  list-style-type: none;
+}
+
+.menutoggle {
+  margin-right: auto;
+}
+
+.menutoggle a {
+  font-size: 2em;
+  color: #fff;
+  text-decoration: none;
+  margin-left: 35%;
+}
+
+.active {
+  max-height: 425px;
+  transition: 0.7s;
+}
+
+.inactive {
+  max-height: 0px;
+  transition: 0.7s;
+  visibility: hidden;
+}
+
+
+.logo {
+	height: 35px;
+	width: auto;
+
+}
+
+.box2 {
+	grid-area: header;
+	margin: 0;
+}
+
+.gecentreerdOpImg {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -225%);
+    text-align: center;
+}
+
+.tekstLijn {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.25em;
+	margin: 0 auto;
+
+}
+
+.tekstHeader {
+	font-family: 'Kalam', bold;
+	font-size: 2em;
+	margin: 0 auto;
+}
+
+
+.box3 {
+	grid-area: passie;
+}
+
+.box4 {
+	grid-area: weblog;
+}
+
+.pHiddenOpKlein {
+	display: none;
+	visibility: hidden;
+}
+
+.box5 {
+	grid-area: foot;
+	width: 100%;
+	margin: 0 auto;
+	background-color: #F3D159;
+	text-align: center;
+}
+
+h4 {
+	margin: 0 auto;
+}
+
+.imgRadius {
+	border: 1px solid;
+	border-radius: 5px;
+	background-color: white;
+}
+
+.socialIcon {
+	width: 25px;
+	height: auto;
+	margin: 10px;
+}
+
+.box6 {
+	grid-area: archief;
+}
+
+.containerArchief {
+	display: flex;
+	justify-content: space-around;
+}
+
+.archief {
+	flex-flow: row;
+	list-style-type: none;
+	padding: 0;
+
+}
+
+a {
+	text-decoration: none;	
+	color: black;
+}
+/*
+.archiefLink {
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 0.125em;
+    transition: border-bottom-color 50ms linear 0s;
+}
+.archiefLink:hover, .archiefLink.active {
+    border-bottom-color: black;
+}*/
+
+.linkHover::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: width .3s;
+}
+
+.linkHover:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+
+.linkHover2 {
+	display: none;
+}
+
+.box7 {
+	grid-area: nav;
+	background-image: linear-gradient(to bottom, white, #F3D159);
+}
+
+/**********End Global (small)***/
+
+/************Small-Mid**************/
+@media only screen and (min-width: 470px) and (max-width: 719px) {
+
+.bedrijfNaam {
+	margin-left: 18%;
+}
+
+.gecentreerdOpImg {
+	transform: translate(-50%, -260%);
+	font-size: 1.5em;
+}
+
+p {
+	font-size: 1.5em;
+}
+
+}
+
+/************End Small-Mid**************/
+
+/************Mid**************/
+@media only screen and (min-width: 720px) and (max-width: 1023px) {
+
+body {
+	font-size: 1.5em;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+	height: 1000px;
+/*	grid-gap: 10px;*/
+
+	grid-template-areas: 
+		"navBalk navBalk"
+		"nav nav"
+		"header header"
+		"passie passie"
+		"weblog archief"
+		"foot foot";
+}
+
+.grid-item {
+	margin: 0px 40px 0px 40px;
+}
+
+.box1 {
+	grid-area: navBalk;
+	height: 100px;
+	background-color: #F3D159;
+	margin: 0;
+	text-align: center;
+	box-shadow: 0px 0px 20px black;
+}
+
+h1 {
+	margin-top: 15px;
+}
+
+.bedrijfNaam {
+	margin: 0;
+	margin-top: 15px;
+    margin-left: 115px;
+}
+
+.logo {
+	height: 50px;
+}
+
+.gecentreerdOpImg {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -210%);
+    text-align: center;
+}
+
+.tekstHeader {
+	font-size: 3em;
+}
+
+.tekstLijn {
+	font-size: 2em;
+}
+
+.box2 {
+	grid-area: header;
+	margin: 0;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+.box5 {
+	margin: 0;
+}
+
+.box6 {
+	grid-area: archief;
+}
+
+.active {
+  max-height: 850px;
+  transition: 1s;
+}
+
+.inactive {
+  max-height: 0px;
+  transition: 1s;
+  visibility: hidden;
+}
+
+}
+
+/**********End Mid************/
+
+/***********Large*************/
+@media only screen and (min-width: 1024px) and (max-width: 1439px){
+
+body {
+	font-size: 0.9em;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+	height: 1000px;
+/*	grid-gap: 10px;*/
+
+	grid-template-areas: 
+		"navBalk navBalk"
+		"nav nav"
+		"header header"
+		"passie passie"
+		"weblog archief"
+		"foot foot";
+}
+
+.grid-item {
+	margin: 0px 50px 0px 50px;
+}
+
+.box1 {
+	height: 75px;
+	margin: 0;
+}
+
+.bedrijfNaam {
+    margin-left: 45%;
+    font-size: 2.5em;
+}
+
+.logo {
+	margin: 0;
+}
+
+h2 {
+	font-size: 2.2em;
+}
+
+.box7 {
+	height: 75px;
+}
+
+.tekstHeader {
+	font-size: 3.25em;
+}
+
+.tekstLijn {
+	font-size: 2.1em;
+}
+
+.gecentreerdOpImg {
+	transform: translate(-50%, -170%);
+}
+
+.box2 {
+	margin: 0;
+}
+
+.imgHeader {
+	object-fit: cover;
+	height: 250px;
+}
+
+.inactive {
+  visibility: visible;
+}
+
+nav ul {
+    flex-flow: row;
+  }
+
+.menutoggle {
+	display: none;
+}
+ 
+.active, .inactive {
+	max-height: unset;
+}
+
+.box3 {
+	display: flex;
+	justify-content: space-between;
+}
+
+.specialistIMG {
+	margin-top: 5%;
+}
+
+.kleineTekst {
+	font-size: 0.8em;
+	margin-bottom: 50px;
+}
+
+.pFlex {
+	flex-shrink: 1.5;
+	margin-left: 50px;
+}
+
+.tweeKolommen {
+	column-count: 2;
+	width: 100%;
+	margin-bottom: 25px;
+}
+
+.box4 p {
+	width: 50%;
+}
+
+.piemonteIMG {
+/*	width: 50%;*/
+	object-fit: cover;
+    height: 250px;
+}
+
+.box5 {
+	margin: 0;
+	height: 125px;
+}
+
+.box5 p {
+	margin-top: 50px;
+}
+
+.box5 img {
+	width: 30px;
+	margin-top: 45px;
+}
+
+.footerTweeKolommen {
+	column-count: 2;
+	width: 100%;
+}
+
+h4 {
+	font-size: 1.25em;
+}
+
+}
+/*********End Large***********/
+
+/************XL**************/
+
+@media only screen and (min-width: 1440px) {
+
+body {
+	font-size: 0.9em;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+	height: 1000px;
+/*	grid-gap: 10px;*/
+	margin: 0 auto;
+	max-width: 1500px;
+
+	grid-template-areas: 
+		"navBalk navBalk navBalk"
+		"nav nav nav"
+		"header header header"
+		"passie passie passie"
+		"weblog weblog archief"
+		"foot foot foot";
+}
+
+.grid-item {
+	margin: 0px 50px 0px 50px;
+}
+
+.box1 {
+	height: 75px;
+	margin: 0;
+}
+
+.bedrijfNaam {
+    margin-left: 45%;
+    font-size: 2.5em;
+}
+
+.logo {
+	margin: 0;
+}
+
+h2 {
+	font-size: 2.2em;
+}
+
+.box7 {
+	height: 75px;
+}
+
+.tekstHeader {
+	font-size: 3.25em;
+}
+
+.tekstLijn {
+	font-size: 2.1em;
+}
+
+.gecentreerdOpImg {
+	transform: translate(-50%, -170%);
+}
+
+.box2 {
+	margin: 0;
+}
+
+.imgHeader {
+	object-fit: cover;
+	height: 250px;
+}
+
+.menu {
+	max-width: 1500px;
+	margin: 0 auto;
+}
+
+.inactive {
+  visibility: visible;
+}
+
+nav ul {
+    flex-flow: row;
+}
+
+.menutoggle {
+	display: none;
+}
+ 
+.active, .inactive {
+	max-height: unset;
+}
+
+.box3 {
+	display: flex;
+}
+
+.specialistIMG {
+	width: 100%;
+	margin-top: 5%;
+	object-fit: cover;
+    height: 300px;
+}
+
+.kleineTekst {
+	font-size: 0.8em;
+	width: 100%;
+	margin-bottom: 50px;
+}
+
+.tweeKolommen {
+	column-count: 2;
+	margin-bottom: 25px;
+}
+
+.pFlex {
+	flex-shrink: 1.5;
+	margin-left: 50px;
+}
+
+.imgRadius {
+	width: 50%;
+	margin-left: 50%;
+	margin-top: 4%;
+}
+
+.containerContent {
+	display: flex;
+}
+
+
+.piemonteIMG {
+	width: 120%;
+	object-fit: cover;
+	height: 200px;
+}
+
+.weblogPFlex{
+	margin-left: 115px;
+}
+
+.pHiddenOpKlein {
+	display: inline;
+	visibility: visible;
+}
+
+.linkHover2::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: width .3s;
+}
+
+.linkHover2:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+
+.linkHover1 {
+	display: none;
+}
+
+.linkHover2 {
+	display: inline;
+}
+
+
+.box5 {
+	margin: 0;
+	height: 125px;
+	margin-top: 50px;
+}
+
+.box5 p {
+	margin-top: 50px;
+}
+
+.box5 img {
+	width: 30px;
+	margin-top: 45px;
+}
+
+.footerTweeKolommen {
+	column-count: 2;
+	width: 100%;
+}
+
+h4 {
+	font-size: 1.25em;
+}
+
+}
+/**********End XL************/
+
